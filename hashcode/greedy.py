@@ -25,7 +25,7 @@ def solve(photos):
                 best = score
                 best_index = i
         print(best, len(photos), score_tags(solution[-1], photos[best_index]), len(solution[-1] & photos[best_index]), len(solution[-1] - photos[best_index]), len(photos[best_index] - solution[-1]))
-        solution.append(photos[i])
-        delete_nth(photos, i)
+        solution.append(photos[best_index])
+        delete_nth(photos, best_index)
         if len(photos) % 20:
             print(len(photos))
